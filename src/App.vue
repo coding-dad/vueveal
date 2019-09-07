@@ -5,7 +5,7 @@
 				<r-section>
 					<h2>vueveal</h2>
 					<h5>Vue.js components for Vue.js</h5>
-					<r-fragment :type="FRAGMENT_TYPES.RED">...in progress</r-fragment>
+					<r-fragment :type="FRAGMENT_TYPES.RED">...work in progress</r-fragment>
 				</r-section>
 				<r-section>
 					<h4>&lt;r-cols /></h4>
