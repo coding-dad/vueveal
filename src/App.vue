@@ -13,6 +13,11 @@
 						</div>
 					</r-cols>
 				</r-section>
+				<r-section>
+					<h2>Vue.js Component Example</h2>
+					<ex-one />
+					<p>Hover your mouse pointer over the rectangle</p>
+				</r-section>
 				<r-section
 					bg-image="https://images.pexels.com/photos/2872767/pexels-photo-2872767.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
 					bg-size="cover"
@@ -92,13 +97,13 @@ function Example() {
 					<r-fragment :type="FRAGMENT_TYPES.BLUE">fragment fade - BLUE</r-fragment>
 				</r-section>
 
-				<r-section :markdown="true">
+				<!-- <r-section :markdown="true">
 					<textarea data-template>
 						## Markdown Titel
 
 						A paragraph with some text and a [link](http://hakim.se).
 					</textarea>
-				</r-section>
+				</r-section>-->
 
 				<r-section-markdown>
 					### r-section-markdown Slot content
@@ -124,6 +129,8 @@ import RCode from "./components/RCode";
 import RNote from "./components/RNote";
 import RCols from "./components/RCols";
 
+import ExOne from "./example-components/ExOne";
+
 export default {
 	name: "App",
 	components: {
@@ -132,7 +139,9 @@ export default {
 		RFragment,
 		RCode,
 		RNote,
-		RCols
+		RCols,
+
+		ExOne
 	},
 
 	data: () => ({
