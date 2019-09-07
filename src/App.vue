@@ -2,26 +2,43 @@
 	<div id="app">
 		<div class="reveal">
 			<div class="slides">
-				<section>
-					<h1>Alles über abc</h1>
-				</section>
-				<section>
-					Alles über abc
-					<section>
-						<h1>aaa</h1>
-					</section>
+				<r-section>
+					<h2>Two Cols</h2>
+					<r-cols>
+						<div
+							slot="left"
+						>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ut corrupti in, laboriosam officiis dicta praesentium eveniet quis similique.</div>
+						<div slot="right">
+							<img src="https://picsum.photos/200/300" />
+						</div>
+					</r-cols>
+				</r-section>
+				<r-section
+					bg-image="https://images.pexels.com/photos/2872767/pexels-photo-2872767.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+					bg-size="cover"
+				>
+					<h1>Alles über Bananen</h1>
+				</r-section>
+				<r-section
+					bg-image="https://images.pexels.com/photos/2872767/pexels-photo-2872767.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+					bg-size="cover"
+				>
+					Alles über Bananen
+					<r-section>
+						<h1>Farbe</h1>
+					</r-section>
 
-					<section>
-						<h1>bbb</h1>
-					</section>
-					<section>
-						<h1>ccc</h1>
-					</section>
-				</section>
-				<section>
+					<r-section>
+						<h1>Geschmack</h1>
+					</r-section>
+					<r-section>
+						<h1>Schale</h1>
+					</r-section>
+				</r-section>
+				<r-section>
 					<r-note>Dies ist eine Folie mit Code.</r-note>
 					<h2>Code...</h2>
-					<r-code line-numbers :trim="false">
+					<r-code line-numbers :trim="false" :font-percent="80" :maxHeight="420">
 						<textarea>
 
 
@@ -41,42 +58,42 @@ function Example() {
 }
 						</textarea>
 					</r-code>
-				</section>
-				<section>
+				</r-section>
+				<r-section>
 					<h1>Fragment I</h1>
 					<r-fragment :type="FRAGMENT_TYPES.GROW">
 						<b style="color:orange">fragment GROW</b>
 					</r-fragment>
 					<r-fragment :type="FRAGMENT_TYPES.SHRINK">fragment SHRINK</r-fragment>
-				</section>
-				<section>
+				</r-section>
+				<r-section>
 					<h2>Fragmente II</h2>
 					<r-fragment :type="FRAGMENT_TYPES.FADE_OUT">fragment fade-OUT</r-fragment>
 					<r-fragment :type="FRAGMENT_TYPES.FADE_UP">fragment fade-UP</r-fragment>
 					<r-fragment :type="FRAGMENT_TYPES.FADE_DOWN">fragment fade-DOWN</r-fragment>
 					<r-fragment :type="FRAGMENT_TYPES.FADE_RIGHT">fragment fade-RIGHT</r-fragment>
 					<r-fragment :type="FRAGMENT_TYPES.FADE_LEFT">fragment fade-LEFT</r-fragment>
-				</section>
-				<section>
+				</r-section>
+				<r-section>
 					<h2>Fragmente III</h2>
 					<r-fragment :type="FRAGMENT_TYPES.FADE_IN_OUT">fragment fade-IN_OUT</r-fragment>
 					<r-fragment :type="FRAGMENT_TYPES.FADE_IN_SEMI_OUT">fragment fade-IN_SEMI_OUT</r-fragment>
-				</section>
-				<section>
+				</r-section>
+				<r-section>
 					<h2>Fragmente IV</h2>
 					<r-fragment :type="FRAGMENT_TYPES.BLUE_ONCE">fragment fade - BLUE ONCE</r-fragment>
 					<r-fragment :type="FRAGMENT_TYPES.RED">fragment fade - RED</r-fragment>
 					<r-fragment :type="FRAGMENT_TYPES.GREEN">fragment fade - GREEN</r-fragment>
 					<r-fragment :type="FRAGMENT_TYPES.BLUE">fragment fade - BLUE</r-fragment>
-				</section>
+				</r-section>
 
-				<section data-markdown>
+				<r-section :markdown="true">
 					<textarea data-template>
 						## Markdown Titel
 
 						A paragraph with some text and a [link](http://hakim.se).
 					</textarea>
-				</section>
+				</r-section>
 
 				<r-section-markdown>
 					### r-section-markdown Slot content
@@ -85,7 +102,7 @@ function Example() {
 					* drei
 				</r-section-markdown>
 
-				<section>Slide 2</section>
+				<r-section>Slide 2</r-section>
 			</div>
 		</div>
 	</div>
@@ -95,18 +112,22 @@ function Example() {
 /* global RevealChalkboard */
 /* eslint-disable no-mixed-spaces-and-tabs */
 
+import RSection from "./components/RSection";
 import RSectionMarkdown from "./components/RSectionMarkdown";
 import RFragment, { FRAGMENT_TYPES } from "./components/RFragment";
 import RCode from "./components/RCode";
 import RNote from "./components/RNote";
+import RCols from "./components/RCols";
 
 export default {
 	name: "App",
 	components: {
+		RSection,
 		RSectionMarkdown,
 		RFragment,
 		RCode,
-		RNote
+		RNote,
+		RCols
 	},
 
 	data: () => ({
