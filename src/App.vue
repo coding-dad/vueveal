@@ -97,22 +97,16 @@ function Example() {
 					<r-fragment :type="FRAGMENT_TYPES.BLUE">fragment fade - BLUE</r-fragment>
 				</r-section>
 
-				<!-- <r-section :markdown="true">
-					<textarea data-template>
-						## Markdown Titel
-
-						A paragraph with some text and a [link](http://hakim.se).
-					</textarea>
-				</r-section>-->
-
 				<r-section-markdown>
-					### r-section-markdown Slot content
-					* eins
-					* zwie
-					* drei
+					### r-section-markdown content
+					* one
+					* two
+					* three
 				</r-section-markdown>
 
-				<r-section>Slide 2</r-section>
+				<r-section>
+					<h1>The End.</h1>
+				</r-section>
 			</div>
 		</div>
 	</div>
