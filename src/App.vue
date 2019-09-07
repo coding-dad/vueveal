@@ -17,22 +17,27 @@
 					bg-image="https://images.pexels.com/photos/2872767/pexels-photo-2872767.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
 					bg-size="cover"
 				>
-					<h1>Alles über Bananen</h1>
+					<h1>All About Bananas</h1>
+					<p>Thanks for the photo...</p>
+					<r-fragment :type="FRAGMENT_TYPES.FADE_LEFT">Photo by Aleksandar Pasaric from Pexels</r-fragment>
 				</r-section>
 				<r-section
 					bg-image="https://images.pexels.com/photos/2872767/pexels-photo-2872767.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
 					bg-size="cover"
 				>
-					Alles über Bananen
+					<h4>All About Bananas</h4>
 					<r-section>
-						<h1>Farbe</h1>
+						<h1>Color</h1>
+						<div>...</div>
 					</r-section>
 
 					<r-section>
-						<h1>Geschmack</h1>
+						<h1>Taste</h1>
+						<div>...</div>
 					</r-section>
 					<r-section>
-						<h1>Schale</h1>
+						<h1>Peel</h1>
+						<div>...</div>
 					</r-section>
 				</r-section>
 				<r-section>
