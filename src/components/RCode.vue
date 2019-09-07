@@ -1,6 +1,7 @@
 <template>
 	<pre><code
 	class="hljs"
+	:style="{fontSize: `${fontPercent}%`, maxHeight: `${maxHeight}px`}"
 	:data-line-numbers="lineNumbers"
 	:data-trim="trim"
 	:data-noescape="noescape"
@@ -22,6 +23,14 @@ export default {
 		noescape: {
 			type: Boolean,
 			default: false
+		},
+		fontPercent: {
+			type: Number,
+			default: 100
+		},
+		maxHeight: {
+			type: Number,
+			default: 400
 		}
 	},
 
