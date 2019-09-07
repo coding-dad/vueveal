@@ -1,7 +1,7 @@
 <template>
 	<section :data-markdown="markdown" :data-background-image="bgImage" :data-background-size="bgSize">
 		<div v-if="content">{{ content }}</div>
-		<slot></slot>
+		<slot v-else></slot>
 	</section>
 </template>
 
