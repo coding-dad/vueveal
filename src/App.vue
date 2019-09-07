@@ -14,13 +14,13 @@
 							<div slot="left">
 								<r-code line-numbers :trim="true" :font-percent="60" :maxHeight="420">
 									<textarea>
-								<r-cols>
-								  <div slot="left">Lorem ipsum</div>
-								  <div slot="right">
-								    <img src="https://picsum.photos/200/300" />
-								  </div>
-								</r-cols>
-								</textarea>
+							<r-cols>
+								<div slot="left">Lorem ipsum</div>
+								<div slot="right">
+									<img src="https://picsum.photos/200/300" />
+								</div>
+							</r-cols>
+							</textarea>
 								</r-code>
 							</div>
 							<div slot="right">
@@ -119,7 +119,7 @@ function Example() {
 				</r-section>
 
 				<r-section-markdown>
-					## < r-section-markdown />
+					## &lt; r-section-markdown />
 					* one
 					* two
 					* three
