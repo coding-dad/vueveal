@@ -3,15 +3,36 @@
 		<div class="reveal">
 			<div class="slides">
 				<r-section>
-					<h2>Two Cols</h2>
-					<r-cols>
-						<div
-							slot="left"
-						>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ut corrupti in, laboriosam officiis dicta praesentium eveniet quis similique.</div>
-						<div slot="right">
-							<img src="https://picsum.photos/200/300" />
-						</div>
-					</r-cols>
+					<h4>&lt;r-cols /></h4>
+					<r-section>
+						<r-fragment>Create content in two columns</r-fragment>
+						<r-fragment>Every column's root element must have a slot-attribute with value left | right</r-fragment>
+					</r-section>
+					<r-section>
+						<div>Example</div>
+						<r-cols>
+							<div slot="left">
+								<r-code line-numbers :trim="true" :font-percent="60" :maxHeight="420">
+									<textarea>
+								<r-cols>
+								  <div slot="left">Lorem ipsum</div>
+								  <div slot="right">
+								    <img src="https://picsum.photos/200/300" />
+								  </div>
+								</r-cols>
+								</textarea>
+								</r-code>
+							</div>
+							<div slot="right">
+								<r-cols>
+									<div slot="left">Lorem ipsum</div>
+									<div slot="right">
+										<img src="https://picsum.photos/200/300" />
+									</div>
+								</r-cols>
+							</div>
+						</r-cols>
+					</r-section>
 				</r-section>
 				<r-section>
 					<h2>Vue.js Component Example</h2>
@@ -47,7 +68,7 @@
 				</r-section>
 				<r-section>
 					<r-note>Dies ist eine Folie mit Code.</r-note>
-					<h2>Code...</h2>
+					<h2>&lt;r-code /></h2>
 					<r-code line-numbers :trim="false" :font-percent="80" :maxHeight="420">
 						<textarea>
 
@@ -70,14 +91,14 @@ function Example() {
 					</r-code>
 				</r-section>
 				<r-section>
-					<h1>Fragment I</h1>
+					<h2>&lt;r-fragment part="1" /></h2>
 					<r-fragment :type="FRAGMENT_TYPES.GROW">
 						<b style="color:orange">fragment GROW</b>
 					</r-fragment>
 					<r-fragment :type="FRAGMENT_TYPES.SHRINK">fragment SHRINK</r-fragment>
 				</r-section>
 				<r-section>
-					<h2>Fragmente II</h2>
+					<h2>&lt;r-fragment part="2" /></h2>
 					<r-fragment :type="FRAGMENT_TYPES.FADE_OUT">fragment fade-OUT</r-fragment>
 					<r-fragment :type="FRAGMENT_TYPES.FADE_UP">fragment fade-UP</r-fragment>
 					<r-fragment :type="FRAGMENT_TYPES.FADE_DOWN">fragment fade-DOWN</r-fragment>
@@ -85,12 +106,12 @@ function Example() {
 					<r-fragment :type="FRAGMENT_TYPES.FADE_LEFT">fragment fade-LEFT</r-fragment>
 				</r-section>
 				<r-section>
-					<h2>Fragmente III</h2>
+					<h2>&lt;r-fragment part="3" /></h2>
 					<r-fragment :type="FRAGMENT_TYPES.FADE_IN_OUT">fragment fade-IN_OUT</r-fragment>
 					<r-fragment :type="FRAGMENT_TYPES.FADE_IN_SEMI_OUT">fragment fade-IN_SEMI_OUT</r-fragment>
 				</r-section>
 				<r-section>
-					<h2>Fragmente IV</h2>
+					<h2>&lt;r-fragment part="4" /></h2>
 					<r-fragment :type="FRAGMENT_TYPES.BLUE_ONCE">fragment fade - BLUE ONCE</r-fragment>
 					<r-fragment :type="FRAGMENT_TYPES.RED">fragment fade - RED</r-fragment>
 					<r-fragment :type="FRAGMENT_TYPES.GREEN">fragment fade - GREEN</r-fragment>
@@ -98,7 +119,7 @@ function Example() {
 				</r-section>
 
 				<r-section-markdown>
-					### r-section-markdown content
+					## < r-section-markdown />
 					* one
 					* two
 					* three
